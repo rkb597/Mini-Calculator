@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.border.LineBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
@@ -30,7 +31,8 @@ public class Calculator extends JFrame implements ActionListener {
 
     private void init() {
 
-        screen.setFont(new Font("Times New Roman", Font.BOLD,18));
+        Font font1 = new Font("Times New Roman", Font.BOLD, 20);
+        screen.setFont(font1);
         setTitle("Calculator");
         screen.setBackground(Color.BLACK);
         panel.setBackground(Color.BLACK);
@@ -50,6 +52,8 @@ public class Calculator extends JFrame implements ActionListener {
 
         calculatingTf.setForeground(Color.WHITE);
         calculatingTf.setBackground(Color.BLACK);
+        calculatingTf.setBorder(new LineBorder(Color.BLACK,0));
+        calculatingTf.setFont(font1);
 
         panel.add(calculatingTf, BorderLayout.SOUTH);
         panel.add(btnPanel, BorderLayout.CENTER);
